@@ -12,7 +12,6 @@ class Solution {
                 ans.add(Integer.toString(i));
             }
         }
-        return ans;
-        
+        return ans; 
     }
 }
