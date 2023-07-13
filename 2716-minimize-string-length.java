@@ -1,12 +1,10 @@
 class Solution {
     public int minimizedStringLength(String s) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashSet<Character> set = new HashSet<Character>();
         for (char c: s.toCharArray()) {
-            if (map.containsKey(c))
-                map.put(c,map.get(c)+1);
-            else
-                map.put(c,1);
+            if (!set.contains(c))
+                set.add(c);
         }
-        return map.size();
+        return set.size();
     }
 }
