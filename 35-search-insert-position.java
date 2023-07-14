@@ -1,3 +1,4 @@
+// Binary Tree
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int lo = 0, hi = nums.length-1;
@@ -11,5 +12,19 @@ class Solution {
                 lo = mid + 1;
         }
         return lo;
+    }
+}
+
+// Brute Force
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int i = 0;
+        while (nums[i]<target) {
+            i++;
+            if (i == nums.length) {
+                break;
+            }
+        }
+        return i;
     }
 }
